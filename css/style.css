@@ -46,3 +46,28 @@ header .header_navbar .header_bt button {
 header .header_navbar .header_bt:hover button {
   background-position: right center;
 }
+
+/* banner */
+.banner .banner_left .banner_bt button {
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  background-size: 200%;
+  transition: all 0.5s;
+}
+.banner .banner_left .banner_bt:hover button {
+  background-position: right center;
+}
+.banner .banner_left ul li {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.banner .banner_left ul li::before {
+  content: "•"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  font-size: 36px;
+  color: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+}
