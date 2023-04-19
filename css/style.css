@@ -61,13 +61,32 @@ header .header_navbar .header_bt:hover button {
 .banner .banner_left .banner_bt:hover button {
   background-position: right center;
 }
-.banner .banner_left ul li {
-  list-style-type: none;
-  padding-left: 16px;
+
+.banner .banner_bg {
+  background-image: url(../img/bg17.png);
 }
-.banner .banner_left ul li::before {
-  content: "•"; /* Insert content that looks like bullets */
-  padding-right: 8px;
-  font-size: 36px;
-  color: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+.banner .banner_left .banner_check .banner_check_icon {
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.banner .banner_left .banner_check .banner_check_icon i {
+  font-size: 20px;
+}
+.banner .banner_left h3 {
+  color: rgb(245, 95, 141);
+}
+.banner .banner_left h1 {
+  font-size: 70px;
+}
+.banner .banner_left p,
+span {
+  color: #636363;
 }
