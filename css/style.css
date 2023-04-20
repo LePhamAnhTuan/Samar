@@ -5,8 +5,25 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  background-color: rgba(184, 182, 182, 0.1);
+}
+body h3 {
+  font-weight: bold;
+  color: #f55f8d;
+  font-size: 20px;
+}
+body h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+body p {
+  flex-wrap: wrap;
+  color: #636363;
 }
 /* header  */
+header {
+  width: 100%;
+}
 header .header_logo,
 .header_navbar {
   height: 150px;
@@ -23,6 +40,7 @@ header .header_navbar ul li:hover a {
   animation-name: chunhay;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
+  color: #f55f8d;
 }
 @keyframes chunhay {
   form {
@@ -42,12 +60,16 @@ header .header_navbar .header_bt button {
   );
   background-size: 200%;
   transition: all 0.5s;
+  width: 150px;
 }
 header .header_navbar .header_bt:hover button {
   background-position: right center;
 }
 
 /* banner */
+.banner {
+  padding-top: 150px;
+}
 .banner .banner_left .banner_bt button {
   background-image: linear-gradient(
     to right,
@@ -57,13 +79,14 @@ header .header_navbar .header_bt:hover button {
   );
   background-size: 200%;
   transition: all 0.5s;
+  width: 150px;
 }
 .banner .banner_left .banner_bt:hover button {
   background-position: right center;
 }
 
 .banner .banner_bg {
-  background-image: url(../img/bg17.png);
+  background: url(../img/bg17.png) left center no-repeat;
 }
 .banner .banner_left .banner_check .banner_check_icon {
   height: 40px;
@@ -83,10 +106,120 @@ header .header_navbar .header_bt:hover button {
 .banner .banner_left h3 {
   color: rgb(245, 95, 141);
 }
-.banner .banner_left h1 {
-  font-size: 70px;
-}
 .banner .banner_left p,
 span {
   color: #636363;
+}
+
+/* services */
+.services {
+  height: 100vh;
+  background: url(../img/bg16.png) top center no-repeat;
+}
+.services .service_content {
+  margin: 80px 0 40px 0;
+}
+.services .service_item .item {
+  height: 400px;
+  width: 30%;
+  text-align: center;
+  /* padding: 20px 40px; */
+  transition: all 0.5s;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.services .service_item .item img,
+h4,
+p {
+  margin-top: 15px;
+}
+.services .service_item .item h4 {
+  color: black;
+}
+.services .service_item .item img {
+  width: 50%;
+}
+.services .service_item .item:hover {
+  background: url(../img/br.png) center no-repeat;
+  background-size: 100% 100%;
+  transform: translateY(-30px);
+  background-color: white;
+}
+
+/* ABOUT */
+.about {
+  background: url(../img/bg15.png) top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.about .about_left img {
+  text-align: left;
+  border-radius: 0 80px 80px 0;
+  width: 95%;
+}
+.about .about_left {
+  width: 100%;
+  /* padding-right: 40px; */
+}
+.about .about_right {
+  width: 100%;
+  padding: 0 100px 0 20px;
+}
+.about .about_right h3,
+h1,
+p {
+  margin-bottom: 20px;
+}
+.about .about_right ul li {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: start;
+  line-height: 5px;
+}
+.about .about_right ul {
+  padding: 0;
+}
+.about .about_right ul li i {
+  padding-right: 10px;
+  font-size: 25px;
+  color: #f55f8d;
+}
+.about .about_bt button {
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  background-size: 200%;
+  transition: all 0.5s;
+  width: 165px;
+  padding: 20px 0;
+}
+.about .about_bt button:hover {
+  background-position: right center;
+}
+/* Number  */
+.number {
+  background: url(../img/bg14.png);
+  height: 100vh;
+}
+.number .number_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.number .number_item .item_icon {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 70px;
 }
