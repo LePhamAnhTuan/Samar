@@ -358,18 +358,120 @@ p {
 
 .portfolio .container .portfolio_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
-  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(2, 1fr) 1.5fr;
   gap: 40px;
+  overflow: hidden;
 }
 .port_item1 {
   grid-column: 1 / span 2;
 }
+
 .port_item5 {
   grid-column-start: 3;
   grid-row: 2 / span 2;
 }
 .port_item6 {
   grid-column: 1 / span 2;
-  grid-row: 3;
+  /* grid-row: 3; */
+}
+.port_item1 img {
+  overflow: hidden;
+  height: 100%;
+}
+.port_item2 img {
+  overflow: hidden;
+  height: 100%;
+}
+.port_item3 img {
+  overflow: hidden;
+  height: 100%;
+}
+.port_item4 img {
+  overflow: hidden;
+  height: 100%;
+}
+.port_item5 img {
+  overflow: hidden;
+  height: 100%;
+}
+.port_item6 img {
+  overflow: hidden;
+  height: 100%;
+}
+.portfolio .portfolio_grid .port_item {
+  position: relative;
+}
+.portfolio .overlay_port {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  border-radius: 12px;
+}
+.portfolio_grid .overlay_port .overlay_icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transform: translate(20px, -20px);
+  cursor: pointer;
+}
+.portfolio_grid .overlay_port .overlay_icon i {
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: white;
+}
+.portfolio_grid .overlay_port .overlay_content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translateY(20px);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  line-height: 6px;
+}
+.portfolio_grid .overlay_port .overlay_content p {
+  opacity: 0.7;
+}
+.portfolio_grid .port_item:hover .overlay_icon,
+.port_item:hover .overlay_content,
+.port_item:hover .overlay_port {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1s;
+}
+.port_item::before {
+  content: "";
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -25%;
+  display: block;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  transition: all 0.75s;
+  opacity: 0;
+}
+
+.port_item:hover::before {
+  opacity: 1;
+  left: 110%;
 }
